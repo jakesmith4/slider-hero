@@ -6,19 +6,21 @@ slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
 });
 
+let counter = 0;
+
+// Auto Switch
 window.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     counter++;
     carousel();
-    if (counter > slides.length - 1) {
-      counter = 0;
-      carousel();
-    }
+    // if (counter > slides.length - 1) {
+    //   counter = 0;
+    //   carousel();
+    // }
     console.log(counter);
   }, 4000);
 });
 
-let counter = 0;
 nextBtn.addEventListener('click', function () {
   counter++;
   carousel();
@@ -31,12 +33,12 @@ prevBtn.addEventListener('click', function () {
 
 function carousel() {
   // Working With Slides
-  // if (counter === slides.length) {
-  //   counter = 0;
-  // }
-  // if (counter < 0) {
-  //   counter = slides.length - 1;
-  // }
+  if (counter === slides.length) {
+    counter = 0;
+  }
+  if (counter < 0) {
+    counter = slides.length - 1;
+  }
   // Working With Buttons
   if (counter < slides.length - 1) {
     nextBtn.style.display = 'block';

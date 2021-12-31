@@ -220,11 +220,12 @@ Slider
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url('./puppy.jpg') center/cover no-repeat;
 }
-/* .btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.75rem;
-} */
+
+.slide:nth-child(5) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('./labrador-retriever.jpg') center/cover no-repeat;
+}
+
 .prevBtn,
 .nextBtn {
   background: transparent;
@@ -263,6 +264,9 @@ Slider
 }
 .slide:nth-child(4) {
   left: 300%;
+}
+.slide:nth-child(5) {
+  left: 400%;
 }
 .slide {
   transform: translateX(0%);
